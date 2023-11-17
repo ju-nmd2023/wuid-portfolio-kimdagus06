@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <title>my portfolio</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <nav class="nav grid"> <!-- Using grid for layout and responsive design. Make it easy. -->
+                <div>
+                    <a href="#" class="nav__logo">KIM GUSTAVSSON</a> <!-- On the top menu, left side logo -->
+                </div>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li> <!-- # move to the section -->
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li> <!-- # move to the section -->
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li> <!-- # move to the section -->
+                        <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li> <!-- When a user clicks Contact on the top menu, it will take user to Contact page. -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    
+        <!-- MAIN -->
+        <main>
+            <!-- Project detail section -->
+            <!-- The same format as About me 
+            It doesn't follow grid rules that are already set in css -->
+            <section class="project detail section" id="projectDetail">
+                <h2 class="section-title">Project: web based-application </h2> <!-- Title -->
+                <div class="p">
+                    <img src="assets/Images/project (7).jpg" alt="project1"> <!-- Project image: set alternative name -->
+                </div> 
+                <div>
+                    <h2 class="project">Website Project Description - Technologies Hub</h2>
+                    <p class="project__text">Explore Cutting-Edge Technologies: <br>
+                        Dive into the world of innovation and stay up-to-date with the latest technologies shaping our future. <br> 
+                        From artificial intelligence and blockchain to augmented reality and quantum computing, <br>
+                        Technologies Hub is your gateway to understanding and embracing the tech revolution.<br>
+                        pursuing a graphic design and web development program at Jönköping University.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
