@@ -219,8 +219,21 @@ img{
 
 /* Contact button*/
 /* Effect setting */
-.button:hover{ 
+/* .button:hover{ 
   box-shadow: 0px 5px 50px #41FF00;
+} */ 
+
+/* Button shake effect. When a user hovers a button, this effect will work. */
+@keyframes shake{
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(-5deg); }
+  50% { transform: translateX(5px) rotate(5deg); }
+  75% { transform: translateX(-5px) rotate(-5deg); }
+  100% { transform: translateX(0); }
+}
+
+.button:hover{
+  animation: shake 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
 }
 
 /* ABOUT MYSLEF*/
@@ -248,23 +261,33 @@ img{
   border-radius: .5rem;
 }
 
-/*  PROJECTS - work */
+/* PROJECTS - work */
+/* Keyframes 1 */
+@keyframes zoomIn{
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
 .work__container{
   row-gap: 2rem;
 }
 
 .work__img{
-  /* box-shadow: 0px 4px 25px #929292; */
   border-radius: .5rem;
   overflow: hidden;
 }
 
 .work__img img{
-  transition: 0.5s;
+  transform-origin: center center; /* Set the pivot point for scaling to the center. */
 }
 
+/* Apply animation on hover */
 .work__img img:hover{
-  transform: scale(1.5); /* When a user hovers on work images, hovered image will be zoom in. */
+  animation: zoomIn 0.5s forwards; /* Add transition and keep the final state */
 }
 
 /* PROJECT DETAIL SETTING */

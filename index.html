@@ -89,18 +89,8 @@
             <!-- Mouse cursor follwing effect -->
             <div class="cursor"></div>
             <div class="cursor2"></div>
-            
-            <!-- Take HTML sourse -->
-            <script>
-            var cursor = document.querySelector(".cursor");
-            var cursor2 = document.querySelector(".cursor2");
 
-            document.addEventListener("mousemove", function(e){ /* Added eventhandler in order to sense mouse moving */
-                /* The code dynamically sets the position of the "cursor" and "cursor2" elements based on the current mouse position. 
-                This creates an effect where the elements follow the mouse cursor. */
-                cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
-            }); 
-            </script>
+            <script src="index.js"></script>
 
             <!-- CONTACT FORM_MAIN -->
             <section class="contact section" id="contact">
@@ -120,7 +110,7 @@
 
         <!-- FOOTER -->
         <footer class="footer">
-            <p class="footer__title">CONTACT</p> <!-- FOOTER text; maybe gonna change later -->
+            <p class="footer__title">Product Manager</p> <!-- FOOTER text; maybe gonna change later -->
             <p class="footer__copy">&#169; Kim Gustavsson. All rigths reserved</p>
         </footer>
     </body>
