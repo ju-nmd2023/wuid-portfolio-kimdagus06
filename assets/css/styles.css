@@ -1,14 +1,14 @@
-/* Declare for convenient */
+/* Declare variables for convenient */
 :root{
   /* Changed from px to rem for responsive design. */
   --header-height: 2rem; /* Defines the height of the header in the document */
   --font-light: 300;
   --font-semi: 600; /* Weight */
-  --first-color: #981919;
-  --second-color: #181818; 
-  --third-color: #fff; 
+  --primary-color: #981919;
+  --text-color: #181818;
+  --back-color: #fff;  
   --font-space: 'Space Grotesk', sans-serif;
-  --largest-font-size: 7rem; 
+  --largest-font-size: 7rem;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
@@ -29,14 +29,14 @@
 
 html{
   scroll-behavior: smooth;
-  background-color: var(--third-color);
+  background-color: var(--back-color);
 }
 
 body{
   margin: var(--header-height) 0 0 0;
   font-family: var(--font-space);
   font-size: var(--normal-font-size);
-  color: var(--second-color);
+  color: var(--text-color);
 }
 
 h1, h2, p{
@@ -45,7 +45,7 @@ h1, h2, p{
 
 /* Product Manager */
 h1{
-  color: var(--second-color);
+  color: var(--text-color);
   font-size: var(--largest-font-size);
 }
 
@@ -69,7 +69,7 @@ img{
 .section-title{
   position: relative;
   font-size: var(--h2-font-size);
-  color: var(--first-color);
+  color: var(--primary-color);
   margin-top: var(--margin-2);
   margin-bottom: var(--margin-4);
   text-align: center;
@@ -84,7 +84,7 @@ img{
   right: 0;
   margin: auto;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: var(--primary-color);
 }
 
 .section{
@@ -107,7 +107,7 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed); /* Always showing */
-  background-color: var(--third-color);
+  background-color: var(--back-color);
   box-shadow: 0 1px 4px #d8d8d8;
 }
 
@@ -146,11 +146,11 @@ img{
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: var(--primary-color);
 }
 
 .nav__logo{
-  color: var(--second-color);
+  color: var(--text-color);
 }
 
 /* Underline setting after item is clicked */
@@ -161,7 +161,7 @@ img{
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: var(--primary-color);
 }
 
 .show{
@@ -190,7 +190,7 @@ img{
 }
 
 .home__title-color{
-  color: var(--first-color);
+  color: var(--primary-color);
 }
 
 .home__social{
@@ -203,14 +203,14 @@ img{
 }
 
 .home__social-icon:hover{
-  color: var(--first-color);
+  color: var(--primary-color);
 }
 
 /* BUTTON */
 .button{
   display: inline-block;
-  background-color: var(--second-color);
-  color: var(--third-color); 
+  background-color: var(--text-color);
+  color: var(--back-color); 
   padding: 0.9rem 1.2rem;
   font-weight: var(--font-light);
   border-radius: 25px;
@@ -236,6 +236,18 @@ img{
   animation: shake 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
 }
 
+/* DARK MODE button */
+#toggle__darkmode{
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-family: var(--font-space);
+  color: var(--back-color);
+  background-color: #881c1c;
+  border-radius: 1rem;
+  font-size: var(--font-semi);
+}
+
 /* ABOUT MYSLEF*/
 .about__container{
   row-gap: 3rem;
@@ -244,11 +256,11 @@ img{
 
 .about__subtitle{
   margin-bottom: var(--margin-2);
-  color: var(--second-color);
+  color: var(--text-color);
 }
 
 .about__text{
-  color: var(--second-color);
+  color: var(--text-color);
   text-transform: lowercase;
 }
 
@@ -259,6 +271,29 @@ img{
 .about__img img{
   width: 200px;
   border-radius: .5rem;
+}
+
+/* Project detail page */
+.project__img img{
+  width: 700px;
+  border-radius: .5rem;
+  text-align: center;
+}
+
+.project__container{
+  display: flex; /* Set this as a flex container (parent elements), so children will be horizontally arranged.*/
+  flex-direction: column; /* Vertically set */
+  align-items: center; /* Center set */
+  row-gap: 3rem;
+  text-align: center;
+}
+
+.project__subtitle{
+  margin: 1rem;
+}
+
+.project__text{
+  text-transform: lowercase;
 }
 
 /* PROJECTS - work */
@@ -290,36 +325,6 @@ img{
   animation: zoomIn 0.5s forwards; /* Add transition and keep the final state */
 }
 
-/* PROJECT DETAIL SETTING */
-/* Click event: the first image in projects */
-.project__container{
-  row-gap: 3rem;
-  text-align: center;
-}
-
-.project__subtitle{
-  margin-bottom: var(--margin-2);
-  color: var(--second-color);
-}
-
-.project__text{
-  color: var(--second-color);
-  text-transform: lowercase;
-}
-
-.project__img{
-  width: 300px;
-  height: 100%; 
-  justify-self: center;
-
-}
-
-.project__img img{
-  width: 200px;
-  border-radius: .5rem;
-}
-
-
 /*  CONTACT */
 .contact__input{
   font-family: var(--font-space);
@@ -328,7 +333,7 @@ img{
   font-weight: var(--font-light);
   padding: 1rem;
   border-radius: 2rem;
-  border: 1.5px solid var(--second-color); /* Input field line color setting */
+  border: 1.5px solid var(--text-color); /* Input field line color setting */
   outline: none;
   margin-bottom: var(--margin-4);
 }
@@ -341,13 +346,13 @@ img{
   cursor: pointer;
   margin-left: auto;
   background-color: #881c1c; /* Set button color due to the background color */
-  color: var(--third-color); /* Button text */
+  color: var(--back-color); /* Button text */
 }
 
 /* FOOTER */
 .footer{
-  background-color: var(--second-color);
-  color: var(--third-color); /* The text */
+  background-color: var(--text-color);
+  color: var(--back-color); /* The text */
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
@@ -380,7 +385,7 @@ img{
 /* RESPONSIVE */
 @media screen and (max-width: 320px){
   h1{
-    color: var(--third-color);
+    color: var(--back-color);
     font-size: var(--big-font-size);
   }
 
@@ -409,7 +414,7 @@ img{
 
 @media screen and (max-width: 425px){
   h1{
-    color: var(--third-color);
+    color: var(--back-color);
     font-size: var(--big-font-size);
   }
 
@@ -500,7 +505,7 @@ img{
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--second-color);
+    background-color: var(--text-color);
     transition: .5s;
   }
 
@@ -533,7 +538,6 @@ img{
   }
 
   .section-title::after{
-    width: 80px;
     top: 3rem;
   }
 
@@ -556,7 +560,7 @@ img{
   }
 
   .nav__link{
-    color: var(--second-color);
+    color: var(--text-color);
   }
 
   .home{
@@ -635,7 +639,7 @@ img{
   position: fixed;
   width: 50px;
   height: 50px;
-  border: 1px solid var(--second-color);
+  border: 1px solid var(--text-color);
   border-radius: 50%;
   left: 0;
   top: 0;
@@ -658,13 +662,30 @@ img{
   transition: 0.17s;
 }
 
-/* It doesn't work, should fix here */
-.button:hover ~ .cursor{
-  transform: translate(-50%, -50%) scale(1.5);
-  background-color: #881c1c;
-  opacity: 0.10;
+/* Dark mode setting */
+html.dark-mode{
+  background-color: var(--text-color);
+  color: var(--back-color);
 }
 
-.button:hover ~ .cursor2{
-  opacity: 0;
+.dark-mode h1{
+  color: #41FF00;
+}
+
+.dark-mode h3{
+  color: var(--back-color);
+}
+
+.dark-mode .button{
+  color: var(--primary-color);
+  background-color: var(--back-color);
+  font-size: var(--font-semi);
+}
+
+.dark-mode .about__subtitle, .about__text{
+  color: var(--back-color);
+}
+
+.dark-mode .cursor{
+  border: 1px solid var(--primary-color);
 }

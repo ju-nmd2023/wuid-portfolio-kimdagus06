@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <title>my portfolio</title>
+        <script src="index.js"></script>
     </head>
     <body>
         <!-- HEADER -->
@@ -20,9 +21,12 @@
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li> <!-- # move to the section -->
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li> <!-- # move to the section -->
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li> <!-- # move to the section -->
+                        <li class="nav__item"><a href="projectDetail.html" class="nav__link">Work</a></li> <!-- # move to the section -->
                         <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li> <!-- When a user clicks Contact on the top menu, it will take user to Contact page. -->
                     </ul>
+                </div>
+                <div>
+                    <button id="toggle__darkmode">Dark Mode</button> <!-- On the top menu, right side button - Dark mode --> <!-- Interactive website assignment -->
                 </div>
             </nav>
         </header>
@@ -32,7 +36,7 @@
             <section class="home grid" id="home">
                 <div class="home__info">
                     <h1 class="home__title">Product Manager<br></h1> <!-- Panel main text -->
-                    <h3 class="home__title-color">I am the architect, sculpting ideas into reality.</h1> <!-- Panel subtext -->
+                    <h3 class="home__title-color">I am the architect, sculpting ideas into reality.</h3> <!-- Panel subtext -->
                     <!-- When a user clicks it, it pops up outlook mail box and fills up receiver. -->
                     <a href="mailto:guki23tl@student.ju.se" class="button">Contact</a> <!-- Hover effect here --> 
                 </div>
@@ -89,8 +93,6 @@
             <!-- Mouse cursor follwing effect -->
             <div class="cursor"></div>
             <div class="cursor2"></div>
-
-            <script src="index.js"></script>
 
             <!-- CONTACT FORM_MAIN -->
             <section class="contact section" id="contact">
